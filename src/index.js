@@ -1,28 +1,49 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import React from 'react';
+import ReactDom from 'react-dom';
+import  Card from './Cards';
+import  './index.css';
+import Sdata from './Sdata';
+console.log(Sdata[0].Sname)
 
-let curDate = new Date(2022, 6, 6,17);
-curDate = curDate.getHours();
-let greeting = '';
-const cssStyle= { }
-
-if(curDate >= 1 && curDate < 12) {
-  greeting = 'Good Morning';
-  cssStyle.color = "green";
-}else if(curDate >= 12 && curDate < 19) {
-  greeting = 'Good Afternoon';
-  cssStyle.color = "Orange";
-}else{
-   greeting = 'Good night ';
-   cssStyle.color = "Black";
-}
-
-ReactDOM.render(
-  <>
-  <div>
-  <h1>Hello sir, <span style={cssStyle}>{greeting}</span></h1>
-  </div>
-  </>,
-  document.getElementById("root")
+ReactDom.render(
+<>
+<h1 className='heading_style'>List of top 6 Prime Amazone Series in 2020</h1>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+<Card 
+imgsrc={Sdata[0].imgsrc} 
+title = {Sdata[0].title} 
+Sname= {Sdata[0].Sname}
+links ={Sdata[0].links}
+/>
+</>,
+document.getElementById('root')
 );
